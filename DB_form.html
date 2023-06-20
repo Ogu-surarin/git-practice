@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head lang="ja">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="format-detection" content="telephone=no,address=no,email=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="noindex,nofollow">
+        <title>●●●●支店　顧客情報システム</title>
+        <link rel="shortcut icon" href="" >
+        <link rel="stylesheet" href="">
+    </head>
+
+    <body>
+        <small>株式会社●●●●　福祉事業部●●●●支店</small>
+        <h1>●●●●支店　顧客情報システム</h1>
+        <div id="search_content">
+            <h3>利用者検索</h3>
+            <form method="post" action="DB_form_2.php">
+                <label for="search_user_name">名前：</label>
+                <input id="search_user_name" type="text" name="userName">
+                <br/>
+                <input type="submit" value="検索">&emsp;<small>空欄で検索すると全件表示ができます</small>
+            </form>
+        </div>
+        <hr/>
+        <div id="regist_content">
+            <h3>新規利用者登録　<small>※入力必須項目です。</small></h3>
+            <form method="post" action="DB_form_3.php">
+                <label for="regist_user_nameSUB">ふりがな：</label>
+                <input id="regist_user_nameSUB" type="text" name="userNameSUB">
+                <br/>
+                <label for="regist_user_name">　※名前：</label>
+                <input id="regist_user_name" type="text" name="userName" required>
+                <br/>
+                <label for="regist_user_Birth">生年月日：</label>
+                <input id="regist_user_Birth" type="date" name="userBirth">
+                <br/>
+                <label>　　性別：</label>
+                <input id="regist_user_SexMale" type="radio" name="userSex" value="男性">
+                <label for="regist_user_SexMale">男性</label>
+                <input id="regist_user_SexFemale" type="radio" name="userSex" value="女性">
+                <label for="regist_user_SexFemale">女性</label>
+                <input id="regist_user_SexOther" type="radio" name="userSex" value="その他">
+                <label for="regist_user_SexOther">その他</label>
+                <br/>
+                <label for="regist_user_address">　居住区：</label>
+                <select id="regist_user_address" name="userAddress">
+                    <option hidden>選択してください</option>
+                    <option value="青葉区">青葉区</option>
+                    <option value="旭区">旭区</option>
+                    <option value="泉区">泉区</option>
+                    <option value="磯子区">磯子区</option>
+                    <option value="神奈川区">神奈川区</option>
+                    <option value="金沢区">金沢区</option>
+                    <option value="港南区">港南区</option>
+                    <option value="港北区">港北区</option>
+                    <option value="栄区">栄区</option>
+                    <option value="瀬谷区">瀬谷区</option>
+                    <option value="都築区">都築区</option>
+                    <option value="鶴見区">鶴見区</option>
+                    <option value="戸塚区">戸塚区</option>
+                    <option value="中区">中区</option>
+                    <option value="西区">西区</option>
+                    <option value="保土ヶ谷区">保土ヶ谷区</option>
+                    <option value="緑区">緑区</option>
+                    <option value="南区">南区</option>
+                </select>
+                <br/>
+                <label for="regist_user_House">住居種別：</label>
+                <select id="regist_user_House" name="userHouse">
+                    <option hidden>選択してください</option>
+                    <option value="賃貸住宅">賃貸住宅</option>
+                    <option value="公営住宅">公営住宅</option>
+                    <option value="一戸建て・マンション">一戸建て・マンション</option>
+                    <option value="借地借家">借地借家</option>
+                    <option value="その他">その他</option>
+                </select>
+                <br/>
+                <label for="regist_user_Familymember">世帯人数：</label>
+                <input id="regist_user_Familymember" type="number" min="1" name="userFamilymember">
+                <br/>
+                <label for="regist_user_FamilyComposition">世帯構成：</label>
+                <select id="regist_user_FamilyComposition" name="userFamilyComposition">
+                    <option hidden>選択してください</option>
+                    <option value="単身">単身</option>
+                    <option value="親と同居">親と同居</option>
+                    <option value="夫婦（子なし）">夫婦（子なし）</option>
+                    <option value="夫婦（未成年の子）">夫婦（未成年の子）</option>
+                    <option value="夫婦（成人の子）">夫婦（成人の子）</option>
+                    <option value="ひとり親（未成年の子）">ひとり親（未成年の子）</option>
+                    <option value="ひとり親（成人の子）">ひとり親（成人の子）</option>
+                    <option value="きょうだい">きょうだい</option>
+                    <option value="その他">その他</option>
+                </select>
+                <br/>
+                <div>
+                    本人主訴：
+                    <br/>
+                    <input id="regist_user_MainDebt" type="radio" name="userMain" value="債務課題">
+                    <label for="regist_user_MainDebt">債務課題</label>
+                    <input id="regist_user_MainTax" type="radio" name="userMain" value="公租公課">
+                    <label for="regist_user_MainTax">公租公課</label>
+                    <input id="regist_user_MainSocialInsurance" type="radio" name="userMain" value="社会保険">
+                    <label for="regist_user_MainSocialInsurance">社会保険</label>
+                    <br/>
+                    <input id="regist_user_MainFamilyfinances" type="radio" name="userMain" value="家計管理">
+                    <label for="regist_user_MainFamilyfinances">家計管理</label>
+                    <input id="regist_user_MainSavings" type="radio" name="userMain" value="貯蓄支援">
+                    <label for="regist_user_MainSavings">貯蓄支援</label>
+                    <input id="regist_user_MainAssets" type="radio" name="userMain" value="資産活用">
+                    <label for="regist_user_MainAssets">資産活用</label>
+                </div>
+                <br/>
+                <label for="regist_user_date">※開始日：</label>
+                <input id="regist_user_date" type="date" name="userDate" required>
+                <br/>
+                <input type="submit" value="登録">
+            </form>
+        </div>
+    </body>
+</html>

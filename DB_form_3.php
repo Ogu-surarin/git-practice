@@ -1,4 +1,5 @@
 <?php
+// git update ok?
 session_start();
 
 $check_user_name =$_POST["userName"];
